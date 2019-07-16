@@ -41,14 +41,15 @@ As I worked on reproducing my results a few months later, the score I reached wa
   - Mean, Std, Mean + Std, Mean - Std
   - Min, Max, Min - Max, Max - Mean, Min - Mean
   - Percentiles : 0.1, 1, 5, 95, 99, 99.9 and their difference with the mean
-     
+- A lot of other features were tried, but those simple ones alone worked the best somehow
+
 ### Model
 
 > See notebook `modeling.ipynb`
 
 I first worked with LightGBM and LSTMs, but gave up on them the last week of the competition, to go with the following idea :
 Each signal was made of three phases, the idea was to consider the extracted features as pixels of an image. 
-My input shape was (3, nb_segments, nb_features) with nb_segments=160 and nb_features=23 in my final submission. 
+My input shape was `(3, nb_segments, nb_features)` with `nb_segments=160` and `nb_features=23` in my final submission. 
 I used the most common target among the three phases as the label.
 
 The architecture I used is a very simple CNN, well regularied. 
