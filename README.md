@@ -20,17 +20,16 @@ The competition took place from  November, 6 2018 to February, 14 2019.
 
 ### Results
 
-This competiton was the first one I really invested in. I did it solo, and ended up **38th** out of 1451.
+I jumped in this competiton right after the Quora one, as I wanted to work with signal data. 
+I did it solo, and ended up **38th** out of 1451.
 It was a really weird competition, because results were unstable.
 On the public leaderboard, I was ranked about 700th, and improvements in my local cross-validation score were not correlated to improvements in the public leaderboard.
 
-In the end, I chose to make a model that had the best CV without using any tricks that would result in my CV improving without my LB necessary improving.
-Namely : checkpointing, thresholding predictions to optimize the metric. 
+In the end, I chose to make a model that had the best CV without using any tricks that would result in my CV improving without my LB necessary improving (checkpointing, thresholding predictions to optimize the metric). Therefore I could trust my CV and use it to select my model, instead of chosing a model that scores well on the public LB, that could score bad on the private one.
 
-The model I went with achieved 0.659 CV, 0.66718 private and 0.65206 public. 
+The model I went with achieved 0.659 CV, 0.66718 private and 0.65206 public. Which is quite stable.
 
-As I worked on reproducing my results a few months later, the score I reached was 0.661 CV which scored 0.68121 on private (which ranks 14th)
-and 0.63618 on public. This is how unstable the results were.
+As I worked on reproducing my results a few months later, the score I reached was 0.661 CV which scored 0.68121 on private (which ranks 14th) and 0.63618 on public. This is how unstable the results were.
 
 ## Final solution overview
 
